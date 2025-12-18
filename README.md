@@ -29,15 +29,26 @@ A full-stack job portal application built with Django REST Framework (backend) a
 
 ```
 job_portal/
-├── authentication/          # User authentication app
-├── job_postings/           # Job posting and application management
-├── profile_app/            # User profiles and social features
-├── feeds/                  # Social feed functionality
-├── relationships/          # User connections
-├── core/                   # Core utilities and permissions
-├── frontend/               # React frontend application
-├── media/                  # User uploaded files
-└── job_portal/             # Django project settings
+├── backend/                     # Django backend
+│   ├── authentication/         # User authentication app
+│   ├── job_postings/           # Job posting and application management
+│   ├── profile_app/            # User profiles and social features
+│   ├── feeds/                  # Social feed functionality
+│   ├── relationships/          # User connections
+│   ├── core/                   # Core utilities and permissions
+│   ├── job_portal/             # Django project settings
+│   ├── manage.py
+│   ├── requirements.txt
+│   └── db.sqlite3              # (ignored)
+│
+├── frontend/                    # React frontend application
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── node_modules/           # (ignored)
+│
+├── .gitignore
+└── README.md
 ```
 
 ## Installation
@@ -46,8 +57,8 @@ job_portal/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd job_portal
+git clone https://github.com/jasimasharaf/job-portal.git
+cd job_portal/backend
 ```
 
 2. Create a virtual environment:
@@ -75,7 +86,7 @@ python manage.py runserver
 
 1. Navigate to frontend directory:
 ```bash
-cd frontend
+cd ../frontend
 ```
 
 2. Install dependencies:
@@ -90,8 +101,7 @@ npm start
 
 ## API Documentation
 
-The project includes Postman collections for API testing:
-- `Job_Portal_Auth_APIs.postman_collection.json`
+The project includes Postman collections for API testing in the backend directory.
 
 ## Contributing
 
