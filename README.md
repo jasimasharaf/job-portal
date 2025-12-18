@@ -51,53 +51,44 @@ job_portal/
 └── README.md
 ```
 
-## Installation
+## Quick Start
 
-### Backend Setup
-
-1. Clone the repository:
+### Option 1: Run Both Servers (Recommended)
 ```bash
+# Clone and navigate to project
 git clone https://github.com/jasimasharaf/job-portal.git
-cd job_portal/backend
+cd job_portal
+
+# Run both backend and frontend in separate terminals
+start_project.bat
 ```
 
-2. Create a virtual environment:
+### Option 2: Manual Setup
+
+#### Backend Setup (Terminal 1)
 ```bash
+cd backend
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install dependencies:
-```bash
+venv\Scripts\activate
+# Install dependencies and run
 pip install -r requirements.txt
-```
-
-4. Run migrations:
-```bash
 python manage.py migrate
-```
-
-5. Start the development server:
-```bash
 python manage.py runserver
 ```
 
-### Frontend Setup
-
-1. Navigate to frontend directory:
+#### Frontend Setup (Terminal 2)
 ```bash
-cd ../frontend
-```
-
-2. Install dependencies:
-```bash
+cd frontend
+# Install dependencies and run
 npm install
-```
-
-3. Start the development server:
-```bash
 npm start
 ```
+
+## Servers
+- **Backend**: http://127.0.0.1:8000 (Django + DRF)
+- **Frontend**: http://localhost:3000 (React)
+- **Database**: PostgreSQL
 
 ## API Documentation
 

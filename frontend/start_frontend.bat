@@ -1,0 +1,9 @@
+@echo off
+echo Starting React Frontend Server...
+echo.
+echo Installing/updating dependencies...
+npm install
+echo.
+echo Starting React development server...
+npm start
+pause
